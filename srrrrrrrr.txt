@@ -1,0 +1,387 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "collapsed_sections": [],
+      "toc_visible": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Basic Python"
+      ],
+      "metadata": {
+        "id": "McSxJAwcOdZ1"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "IOME31ndEMo0"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 1. Split this string"
+      ],
+      "metadata": {
+        "id": "CU48hgo4Owz5"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "s = \"Hi there Sam!\""
+      ],
+      "metadata": {
+        "id": "s07c7JK7Oqt-"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "hRJ6FU3cAMc3"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "s.split()\n",
+        "['HI','there','Sam']"
+      ],
+      "metadata": {
+        "id": "6mGVa3SQYLkb"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "*`italicized text`*## 2. Use .format() to print the following string. \n",
+        "\n",
+        "### Output should be: The diameter of Earth is 12742 kilometers."
+      ],
+      "metadata": {
+        "id": "GH1QBn8HP375"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "planet = \"Earth\"\n",
+        "diameter = 12742"
+      ],
+      "metadata": {
+        "id": "_ZHoml3kPqic"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "str=\"The diameter of Earth is{}\"\n",
+        "print(str.format(\"12742 kilometers\"))\n",
+        "The diameter of Earth is 12742 kilometers"
+      ],
+      "metadata": {
+        "id": "HyRyJv6CYPb4"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 3. In this nest dictionary grab the word \"hello\""
+      ],
+      "metadata": {
+        "id": "KE74ZEwkRExZ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}"
+      ],
+      "metadata": {
+        "id": "fcVwbCc1QrQI"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print (d['k1'][3][\"tricky\"][3]['target'][3])"
+      ],
+      "metadata": {
+        "id": "MvbkMZpXYRaw"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Numpy"
+      ],
+      "metadata": {
+        "id": "bw0vVp-9ddjv"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "LLiE_TYrhA1O"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 4.1 Create an array of 10 zeros? \n",
+        "## 4.2 Create an array of 10 fives?"
+      ],
+      "metadata": {
+        "id": "wOg8hinbgx30"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "b=np.zeros((10,),dtype=int)\n",
+        "print(b)\n",
+        "[0,0,0,0,0,0,0,0,0,0]\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "NHrirmgCYXvU"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "array=np.onrs(10)*5\n",
+        "print(array)\n",
+        "\n",
+        "[5,5,5,5,5,5,5,5,5,5]"
+      ],
+      "metadata": {
+        "id": "e4005lsTYXxx"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 5. Create an array of all the even integers from 20 to 35"
+      ],
+      "metadata": {
+        "id": "gZHHDUBvrMX4"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "array=np.arange(20,36,2)\n",
+        "print(\"Array of all the even integers from 20 to 35\")\n",
+        "print (array)\n",
+        "Array of all the even integers from 20 to 35\n",
+        "[20,22,24,26,28,30,32,34]"
+      ],
+      "metadata": {
+        "id": "oAI2tbU2Yag-"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 6. Create a 3x3 matrix with values ranging from 0 to 8"
+      ],
+      "metadata": {
+        "id": "NaOM308NsRpZ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "x=np.arange(0,9).reshape(3,3)\n",
+        "print(x)\n",
+        "[[0 1 2]\n",
+        " [3 4 5]\n",
+        " [6 7 8]]"
+      ],
+      "metadata": {
+        "id": "tOlEVH7BYceE"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 7. Concatinate a and b \n",
+        "## a = np.array([1, 2, 3]), b = np.array([4, 5, 6])"
+      ],
+      "metadata": {
+        "id": "hQ0dnhAQuU_p"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "a=np.array([1,2,3])\n",
+        "print(a)\n",
+        "print()\n",
+        "b=np.array([4,5,6])\n",
+        "print(b)\n",
+        "print('\\n___Result___')\n",
+        "print(np.concatenate((a,b)))\n",
+        "\n",
+        "[1 2 3]\n",
+        "[4 5 6]\n",
+        "\n",
+        "[1 2 3 4 5 6]\n"
+      ],
+      "metadata": {
+        "id": "rAPSw97aYfE0"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Pandas"
+      ],
+      "metadata": {
+        "id": "dlPEY9DRwZga"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 8. Create a dataframe with 3 rows and 2 columns"
+      ],
+      "metadata": {
+        "id": "ijoYW51zwr87"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n"
+      ],
+      "metadata": {
+        "id": "T5OxJRZ8uvR7"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as nump"
+      ],
+      "metadata": {
+        "id": "xNpI_XXoYhs0"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 9. Generate the series of dates from 1st Jan, 2023 to 10th Feb, 2023"
+      ],
+      "metadata": {
+        "id": "UXSmdNclyJQD"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "7"
+      ],
+      "metadata": {
+        "id": "dgyC0JhVYl4F"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 10. Create 2D list to DataFrame\n",
+        "\n",
+        "lists = [[1, 'aaa', 22],\n",
+        "         [2, 'bbb', 25],\n",
+        "         [3, 'ccc', 24]]"
+      ],
+      "metadata": {
+        "id": "ZizSetD-y5az"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lists = [[1, 'aaa', 22], [2, 'bbb', 25], [3, 'ccc', 24]]"
+      ],
+      "metadata": {
+        "id": "_XMC8aEt0llB"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "df=pd.DataFrame(lists)\n",
+        "df\n",
+        "   0   1   2\n",
+        "0  1  aaa  22\n",
+        "1  2  bbb  25\n",
+        "2  3  ccc  24"
+      ],
+      "metadata": {
+        "id": "knH76sDKYsVX"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
